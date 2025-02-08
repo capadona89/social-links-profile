@@ -1,0 +1,14 @@
+@import "./variables";
+
+@mixin on-desktop {
+  @media (min-width: $mobile-screen) {
+    @content;
+  }
+}
+
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} $transition-time;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
